@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-5 col-xs-offset-1 girlpic">
+    <div id="girl1" class=" pull-right" ng-click="rankGirl(1)">
+      <img ng-src={{girl1.url}} alt="girl1" class="img-rounded img-responsive">
+      <h4>{{girl1.rank}}</h4>
+    </div>
+  </div>
+  <div class="col-xs-5 girlpic">
+    <div id="girl2" class=" pull-left" ng-click="rankGirl(2)">
+      <img ng-src={{girl2.url}} alt="girl2" class="img-rounded img-responsive">
+      <h4>{{girl2.rank}}</h4>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12 text-center">
+    <h4>
+      <a href="#" ng-click="neither()">
+        Neither - show me a different pair
+      </a>
+    </h4>
+  </div>
+</div>

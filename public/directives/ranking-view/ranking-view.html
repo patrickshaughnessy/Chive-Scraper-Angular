@@ -1,0 +1,21 @@
+<div class="col-xs-4 table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Votes</th>
+        <th class="text-center">Hottie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-if="!girls">
+        <td style="color:white">Pick A Category...</td>
+      </tr>
+      <tr ng-if="girls" ng-repeat="girl in girls | orderBy:'-rank'">
+        <td class="rank-number">{{girl.rank}}</td>
+        <td>
+          <img class='img-rounded img-responsive girlpic2' ng-src={{girl.url}} alt="">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

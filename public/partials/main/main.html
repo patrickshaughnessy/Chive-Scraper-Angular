@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 text-center header">
+      <h1>Left or Right?
+        <br>
+        <small>Click on an image or
+          <button class="btn btn-lg btn-success" ui-sref="rankings">View The Rankings</button>
+        </small>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 categories table-responsive">
+      <table class="table">
+        <caption>Categories</caption>
+        <tbody>
+          <tr>
+            <td><a ui-sref="main.asian">Asian</a></td>
+            <td><a ui-sref="main.cute">Cute</a></td>
+            <td><a ui-sref="main.findher">Find Her</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <ui-view></ui-view>
+</div>

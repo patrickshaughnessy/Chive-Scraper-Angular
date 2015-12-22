@@ -1,0 +1,47 @@
+body {
+  background-image: url('/assets/bg-chive.jpg');
+}
+
+.header {
+  background-color: black;
+  color: white;
+  margin-bottom: 5%;
+  padding: 1%;
+}
+
+.girlpic {
+  background-color: white;
+  padding: 3%;
+  margin: 1%;
+}
+.img-responsive.girlpic2 {
+  background-color: white;
+  padding: 3%;
+  margin: 1% auto;
+  height: 15vw;
+  text-align: center;
+}
+
+.rank-number {
+  font-size: 10em;
+  vertical-align: middle;
+  color: white;
+}
+
+
+.btn-success {
+  background-color: black !important;
+  border-radius: 0px !important;
+  border-width: 2px !important;
+}
+
+thead {
+  color: white;
+  font-size: 2em;
+}
+
+.categories {
+  background-color: white;
+  text-align: center;
+  padding: 2%;
+}
