@@ -4,28 +4,18 @@ angular
   .module('app', ['ui.router', 'firebase'])
 
   .config(function($urlRouterProvider, $stateProvider){
-    $urlRouterProvider.otherwise('/')
+    $urlRouterProvider.otherwise('/main')
 
     $stateProvider
       .state('main', {
-        url: '/',
+        url: '/main',
         templateUrl: 'partials/main/main.html',
         controller: 'mainCtrl'
       })
-      .state('main.asian', {
-        url: 'asian',
-        templateUrl: 'partials/main/asian/asian.html',
-        controller: 'asianCtrl'
-      })
-      .state('main.cute', {
-        url: 'cute',
-        templateUrl: 'partials/main/cute/cute.html',
-        controller: 'cuteCtrl'
-      })
-      .state('main.findher', {
-        url: 'findher',
-        templateUrl: 'partials/main/findher/findher.html',
-        controller: 'findherCtrl'
+      .state('main.toggleView', {
+        url: '/:category',
+        templateUrl: 'partials/main/toggleView/toggleView.html',
+        controller: 'toggleViewCtrl'
       })
       .state('rankings', {
         url: '/rankings',

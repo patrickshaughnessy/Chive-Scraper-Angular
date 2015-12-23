@@ -2,9 +2,9 @@
 
 angular
   .module('app')
-  .controller('cuteCtrl', function($scope, $firebaseArray, $firebaseObject, $state){
+  .controller('toggleViewCtrl', function($scope, $firebaseArray, $firebaseObject, $state, $stateParams){
 
-    var ref = new Firebase('https://chive-smash.firebaseio.com/chivegirls/cute');
+    var ref = new Firebase(`https://chive-smash.firebaseio.com/chivegirls/${$stateParams.category}`);
     var girls = $firebaseObject(ref);
 
     girls.$loaded().then(function(){

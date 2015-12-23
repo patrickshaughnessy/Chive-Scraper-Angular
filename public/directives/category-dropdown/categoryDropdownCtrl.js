@@ -19,6 +19,15 @@ angular
         case 'findher':
           $scope.category = 'Find Her';
           break;
+        case 'burnbra':
+          $scope.category = 'Burn Bra';
+          break;
+        case 'fuego':
+          $scope.category = 'Fuego';
+          break;
+        case 'humpday':
+          $scope.category = 'Hump Day';
+          break;
         default:
           $scope.category = 'Choose A Category'
       }
