@@ -2,13 +2,16 @@
 
 angular
   .module('app')
-  .controller('toggleViewCtrl', function($scope, $firebaseArray, $firebaseObject, $state, $stateParams){
+  .controller('toggleViewCtrl', function($timeout, $scope, $firebaseArray, $firebaseObject, $state, $stateParams){
+
+    $scope.showRank = false;
 
     var ref = new Firebase(`https://chive-smash.firebaseio.com/chivegirls/${$stateParams.category}`);
     var girls = $firebaseObject(ref);
 
     girls.$loaded().then(function(){
       genRandomGirls(girls);
+      $scope.$emit('viewChange', $stateParams.category);
     })
 
     function genRandomGirls(girls) {
@@ -33,7 +36,14 @@ angular
         $scope.girl2.rank++
         $scope.girl2.$save()
       }
-      genRandomGirls(girls);
+
+      $scope.showRank = true;
+
+      $timeout(function(){
+        $scope.showRank = false;
+        genRandomGirls(girls);
+      }, 1000)
+
     }
 
     $scope.neither = function(){

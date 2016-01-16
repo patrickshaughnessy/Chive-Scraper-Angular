@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-xs-12 text-center headerArea">
+        <h1>Left or Right?
+          <br>
+          <small>Choose a category, then click on an image or
+            <button class="btn btn-lg btn-success" ui-sref="rankings">View The Rankings</button>
+          </small>
+        </h1>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 categoriesArea">
+      <div class="table-responsive">
+        <table class="table">
+          <caption>Categories</caption>
+          <tbody>
+            <tr>
+              <td><a ui-sref="main.toggleView({category:'asian'})">Asian</a></td>
+              <td><a ui-sref="main.toggleView({category:'cute'})">Cute</a></td>
+              <td><a ui-sref="main.toggleView({category:'findher'})">Find Her</a></td>
+            </tr>
+            <tr>
+              <td><a ui-sref="main.toggleView({category:'burnbra'})">Burn Bra</a></td>
+              <td><a ui-sref="main.toggleView({category:'fuego'})">Fuego</a></td>
+              <td><a ui-sref="main.toggleView({category:'humpday'})">Hump Day</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row girlsArea">
+    <ui-view ng-show="view"></ui-view>
+  </div>
+</div>

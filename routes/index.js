@@ -14,6 +14,10 @@ function populateRef(refname, url){
   var i = 1;
   while (i <= 10){
     request.get(`http://thechive.com/category/girls/${url}/page/${i}`, function(err, resp, body){
+      if (err) {
+        console.log(err);
+        return;
+      }
       var $ = cheerio.load(body);
       $('.card-thumb.wp-post-image').each(function(i, e){
         var imageSrc = $(e).attr('src');
