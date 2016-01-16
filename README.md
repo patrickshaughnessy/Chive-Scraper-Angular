@@ -2,4 +2,6 @@
 
 A little chive scraper built with cheerio, angular, and firebase
 
-Check it out at [Heroku Link](herokulink "heroku link")
+[Deployed to heroku here](https://chive-smash.herokuapp.com/ "heroku link")
+
+Vote, like, share!
